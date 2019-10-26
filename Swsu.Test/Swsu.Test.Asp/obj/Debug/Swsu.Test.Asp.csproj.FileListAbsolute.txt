@@ -80,3 +80,7 @@ C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test
 C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.csproj.CopyComplete
 C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.dll
 C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.pdb
+C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\EntityFramework.dll
+C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\EntityFramework.SqlServer.dll
+C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\EntityFramework.xml
+C:\Users\Gibson\Desktop\src\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\EntityFramework.SqlServer.xml
