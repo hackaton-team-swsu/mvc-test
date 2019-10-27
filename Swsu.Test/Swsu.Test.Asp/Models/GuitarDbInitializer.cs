@@ -17,6 +17,12 @@ namespace Swsu.Test.Asp.Models
             db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
             db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
             db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
+            db.Guitars.Add(new Guitar { Producer = "Ibanez", Model = "Rizen", Price = 700 });
             base.Seed(db);
         }
         

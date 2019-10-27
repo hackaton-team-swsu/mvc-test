@@ -13,7 +13,9 @@ namespace Swsu.Test.Asp.Models
 
         public string Model { get; set; }
 
-        public int Price { get; set; }
+        public decimal Price { get; set; }
+
+        public bool IsInStore { get; set; }
     }
 
 }

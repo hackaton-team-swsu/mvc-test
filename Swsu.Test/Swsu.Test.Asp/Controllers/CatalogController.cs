@@ -19,12 +19,15 @@ namespace Swsu.Test.Asp.Controllers
         /// </summary>
         /// <param name="n">Номер страницы</param>
         /// <returns>Страницу каталога гитар</returns>
-        public ActionResult Index(int n = 1)
+        public ActionResult Index(int page = 0)
         {
-            IEnumerable<Guitar> guitars = db.Guitars;
-            /// передаем все объекты в динамическое свойство Books в ViewBag
+            IEnumerable<Guitar> guitars = db.Guitars
+                                        .OrderBy(g => g.Id)
+                                        .Take(6)
+                                        .Skip(page * 6);
+
             ViewBag.Guitars = guitars;
-            ViewBag.Page = n;
+            ViewBag.Page = (page == 0)?1:page;
             return View();
         }
     }

@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div>
-        <h3>Купи гитару, а то печень вырежу</h3>
+    <div class="content">
+        <h3 align="center">Купи гитару, а то печень вырежу</h3>
         <div class='shop'>
             @foreach (var b in ViewBag.Guitars)
             {
@@ -25,9 +25,9 @@
             }
         </div>
         <div class="control-buttons">
-            <p>Пред</p>
+            <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 1}, null)</p>
             <p>@ViewBag.Page</p>
-            <p>След</p>
+            <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page + 1 }, null)</p>
         </div>
     </div>
 </body>

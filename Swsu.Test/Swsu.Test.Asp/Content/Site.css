@@ -42,19 +42,24 @@ input {
     width: 150px;
 }
 
-.shop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.content > h3 {
+    margin-bottom: 1em;
 }
 
-.shop-header {
+.content {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.shop {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
 }
 
 .control-buttons {
     display: flex;
     flex-direction: row;
-    margin-right: 2em;
+    justify-content: space-between;
+    width: 20%;
+    margin-left: 40%;
 }
