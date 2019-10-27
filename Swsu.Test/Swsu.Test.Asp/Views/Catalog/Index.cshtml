@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Музыкальный магазин</title>
+</head>
+
+<body>
+    <div>
+        <h3>Купи гитару, а то печень вырежу</h3>
+        <div class='shop'>
+            @foreach (var b in ViewBag.Guitars)
+            {
+                <div class="shop-item">
+                    <p>@b.Producer</p>
+                    <p>@b.Model</p>
+                    <p>@b.Price</p>
+                    <p><a href="/Home/Buy/@b.Id">Купить</a></p>
+                </div>
+            }
+        </div>
+        <div class="control-buttons">
+            <p>Пред</p>
+            <p>@ViewBag.Page</p>
+            <p>След</p>
+        </div>
+    </div>
+</body>
+</html>
