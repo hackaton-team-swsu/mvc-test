@@ -131,8 +131,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Book.cs" />
-    <Compile Include="Models\BookDbInitializer.cs" />
+    <Compile Include="Models\Guitar.cs" />
+    <Compile Include="Models\GuitarDbInitializer.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

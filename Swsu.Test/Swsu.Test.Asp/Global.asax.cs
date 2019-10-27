@@ -14,7 +14,7 @@ namespace Swsu.Test.Asp
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new BookDbInitializer());
+            Database.SetInitializer(new GuitarDbInitializer());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

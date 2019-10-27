@@ -6,9 +6,9 @@ using System.Data.Entity;
 
 namespace Swsu.Test.Asp.Models
 {
-    public class BookContext : DbContext
+    public class GuitarContext : DbContext
     {
-        public DbSet<Book> Books { get; set; }
+        public DbSet<Guitar> Guitars { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
     }
 }

@@ -7,23 +7,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Книжный магазин</title>
+    <title>Музыкальный магазин</title>
 </head>
 
 <body>
     <div>
-        <h3>Купи книгу, а то печень вырежу</h3>
+        <h3>Купи гитару, а то печень вырежу</h3>
         <table>
             <tr>
-                <td><p>Название книги</p></td>
-                <td><p>Автор</p></td>
+                <td><p>Фирма производитель</p></td>
+                <td><p>Модель</p></td>
                 <td><p>Цена</p></td>
             </tr>
-            @foreach (var b in ViewBag.Books)
+            @foreach (var b in ViewBag.Guitars)
             {
                 <tr>
-                    <td><p>@b.Name</p></td>
-                    <td><p>@b.Author</p></td>
+                    <td><p>@b.Producer</p></td>
+                    <td><p>@b.Model</p></td>
                     <td><p>@b.Price</p></td>
                     <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
                 </tr>

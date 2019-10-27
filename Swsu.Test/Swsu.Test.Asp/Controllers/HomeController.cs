@@ -10,14 +10,14 @@ namespace Swsu.Test.Asp.Controllers
     public class HomeController : Controller
     { 
     /// создаем контекст данных
-        BookContext db = new BookContext();
+        GuitarContext db = new GuitarContext();
 
         public ActionResult Index()
         {
             /// получаем из бд все объекты Book
-            IEnumerable<Book> books = db.Books;
+            IEnumerable<Guitar> guitars = db.Guitars;
             /// передаем все объекты в динамическое свойство Books в ViewBag
-            ViewBag.Books = books;
+            ViewBag.Guitars = guitars;
 
             /// возвращаем представление
             return View();
@@ -26,7 +26,7 @@ namespace Swsu.Test.Asp.Controllers
         [HttpGet]
         public ActionResult Buy(int id = 0)
         {
-            ViewBag.BookId = id;
+            ViewBag.GuitarId = id;
             return View();
         }
 

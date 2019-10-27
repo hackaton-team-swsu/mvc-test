@@ -13,7 +13,7 @@ namespace Swsu.Test.Asp.Models
 
         public string Address { get; set; }
     
-        public int BookId { get; set; }
+        public int GuitarId { get; set; }
 
         public DateTime Date { get; set; }
     }
