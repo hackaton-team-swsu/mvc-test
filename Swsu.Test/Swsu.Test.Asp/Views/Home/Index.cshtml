@@ -13,22 +13,22 @@
 <body>
     <div>
         <h3>Купи гитару, а то печень вырежу</h3>
-        <table>
-            <tr>
-                <td><p>Фирма производитель</p></td>
-                <td><p>Модель</p></td>
-                <td><p>Цена</p></td>
-            </tr>
+        <div class='shop'>
             @foreach (var b in ViewBag.Guitars)
             {
-                <tr>
-                    <td><p>@b.Producer</p></td>
-                    <td><p>@b.Model</p></td>
-                    <td><p>@b.Price</p></td>
-                    <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
-                </tr>
+            <div class="shop-item">
+                <p>@b.Producer</p>
+                <p>@b.Model</p>
+                <p>@b.Price</p>
+                <p><a href="/Home/Buy/@b.Id">Купить</a></p>
+            </div>
             }
-        </table>
+        </div>
+        <div class="control-buttons">
+            <p>Пред</p>
+            <p>номер</p>
+            <p>След</p>
+        </div>
     </div>
 </body>
 </html>
