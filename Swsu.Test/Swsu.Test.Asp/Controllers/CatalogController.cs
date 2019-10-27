@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swsu.Test.Asp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,11 +7,23 @@ using System.Web.Mvc;
 
 namespace Swsu.Test.Asp.Controllers
 {
+    /// <summary>
+    /// Контроллер каталога
+    /// </summary>
     public class CatalogController : Controller
     {
-        // GET: Catalog
-        public ActionResult Index(int n)
+        GuitarContext db = new GuitarContext();
+
+        /// <summary>
+        /// Страница каталога гитар
+        /// </summary>
+        /// <param name="n">Номер страницы</param>
+        /// <returns>Страницу каталога гитар</returns>
+        public ActionResult Index(int n = 1)
         {
+            IEnumerable<Guitar> guitars = db.Guitars;
+            /// передаем все объекты в динамическое свойство Books в ViewBag
+            ViewBag.Guitars = guitars;
             ViewBag.Page = n;
             return View();
         }
