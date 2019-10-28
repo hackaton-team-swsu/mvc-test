@@ -22,7 +22,7 @@ namespace Swsu.Test.Asp.Controllers
         public ActionResult Index(int page)
         {
             IEnumerable<Guitar> guitars = null;
-            int guitarsPerPage = 8;
+            int guitarsPerPage = 10;
             try
             {
                 guitars = db.Guitars
@@ -31,7 +31,7 @@ namespace Swsu.Test.Asp.Controllers
                           .Take(6)
                           .ToList();
             }
-            catch(ArgumentException ex)
+            catch(ArgumentException)
             {
                 guitars = db.Guitars
                           .OrderBy(g => g.Model)
