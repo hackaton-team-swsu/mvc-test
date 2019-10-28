@@ -10,7 +10,7 @@
     <nav>
         <ul class="menu container">
             <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-            <li>@Html.ActionLink("Каталог", "Index", "Catalog")</li>
+            <li>@Html.ActionLink("Каталог", "Index", "Catalog", new { page = 0 }, null)</li>
         </ul>
     </nav>
     @RenderBody()

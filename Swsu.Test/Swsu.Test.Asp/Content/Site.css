@@ -25,17 +25,8 @@ nav {
         color: red;
     }
 
-table {
-    vertical-align: middle;
-    text-align: left;
-}
-
 .header {
     font-weight: bold;
-}
-
-td {
-    padding-right: 10px;
 }
 
 input {
@@ -46,14 +37,10 @@ input {
     margin-bottom: 1em;
 }
 
-.content {
-    width: 60%;
-    margin-left: 20%;
-}
-
 .shop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: unset;
 }
 
 .control-buttons {

@@ -19,23 +19,34 @@ namespace Swsu.Test.Asp.Controllers
         /// </summary>
         /// <param name="n">Номер страницы</param>
         /// <returns>Страницу каталога гитар</returns>
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(int page)
         {
-            var pagesToShow = page;
-            if (page < 1)
+            IEnumerable<Guitar> guitars = null;
+            int guitarsPerPage = 8;
+            try
             {
-                page = 1;
+                guitars = db.Guitars
+                          .OrderBy(g => g.Model)
+                          .Skip(page * guitarsPerPage)
+                          .Take(6)
+                          .ToList();
             }
+            catch(ArgumentException ex)
+            {
+                guitars = db.Guitars
+                          .OrderBy(g => g.Model)
+                          .Skip(0 * guitarsPerPage)
+                          .Take(6)
+                          .ToList();
 
-            IEnumerable<Guitar> guitars = db.Guitars
-                                        .OrderBy(g => g.Model)
-                                        .Skip(--page * 6)
-                                        .Take(6)
-                                        .ToList();
-
-            ViewBag.Guitars = guitars;
-            ViewBag.Page = (pagesToShow < 1) ? 1 : pagesToShow;
-            return View();
+                page = 0;
+            }
+            finally
+            {
+                ViewBag.Guitars = guitars;
+                ViewBag.Page = ++page;
+            }
+               return View();            
         }
     }
 }

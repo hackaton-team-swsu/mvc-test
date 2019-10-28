@@ -15,19 +15,19 @@
         <h3 align="center">Купи гитару, а то печень вырежу</h3>
         <div class='shop'>
             @foreach (var b in ViewBag.Guitars)
-            {
+{
                 <div class="shop-item">
                     <p>@b.Producer</p>
                     <p>@b.Model</p>
                     <p>@b.Price</p>
                     <p><a href="/Home/Buy/@b.Id">Купить</a></p>
                 </div>
-            }
+}
         </div>
         <div class="control-buttons">
-            <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 1}, null)</p>
+            <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 2 }, null)</p>
             <p>@ViewBag.Page</p>
-            <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page + 1 }, null)</p>
+            <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page}, null)</p>
         </div>
     </div>
 </body>
