@@ -7,7 +7,7 @@ namespace Swsu.Test.Asp.Models
 {
     public class Guitar
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Producer { get; set; }
 

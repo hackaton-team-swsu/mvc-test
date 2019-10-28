@@ -133,7 +133,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Guitar.cs" />
-    <Compile Include="Models\GuitarDbInitializer.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\DbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
