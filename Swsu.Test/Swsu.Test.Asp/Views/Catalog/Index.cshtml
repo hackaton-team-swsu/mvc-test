@@ -8,16 +8,16 @@
         @foreach (var b in ViewBag.Guitars)
         {
             <div class="shop-item">
-                <p>@b.Producer</p>
-                <p>@b.Model</p>
-                <p>@b.Price</p>
-                <button>@Html.ActionLink("Купить", "Purchase", "Catalog", new { id = b.Id }, null)</button>
+                <p class="producer">@b.Producer</p>
+                <p class="model">@b.Model</p>
+                <input class="price" value="@b.Price">
+                <button class="buy-btn">@Html.ActionLink("Купить", "Purchase", "Catalog", new { id = b.Id }, null)</button>
             </div>
         }
     </div>
-    <div class="control-buttons">
-        <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 2 }, null)</p>
-        <p>@ViewBag.Page</p>
-        <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page}, null)</p>
-    </div>
+</div>
+<div class="control-buttons">
+    <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 2 }, null)</p>
+    <p>@ViewBag.Page</p>
+    <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page }, null)</p>
 </div>

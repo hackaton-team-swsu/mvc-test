@@ -1,4 +1,8 @@
-﻿a {
+﻿* {
+    outline: none;
+}
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -18,17 +22,17 @@ nav {
     padding-left: 10px;
 }
 
-    .menu ul {
-        list-style: none;
-    }
+.menu ul {
+    list-style: none;
+}
 
-    .menu li {
-        display: inline;
-    }
+.menu li {
+    display: inline;
+}
 
-    .menu a:hover {
-        color: red;
-    }
+.menu a:hover {
+    color: red;
+}
 
 .header {
     font-weight: bold;
@@ -38,13 +42,20 @@ input {
     width: 150px;
 }
 
+.content {
+    min-height: 600px;
+}
+
 .content > h3 {
     margin-bottom: 1em;
 }
 
 .shop {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: inherit;
+    padding: 5px;
 }
 
 .control-buttons {
@@ -55,6 +66,50 @@ input {
     margin-left: 40%;
 }
 
+.producer {
+    grid-area: pr;
+    font-size: 3em;
+    padding-left: 13%;
+}
+
+.model {
+    grid-area: md;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.3em;
+    padding-right: 13%;
+}
+
+.price {
+    grid-area: pri;
+    text-align: center;
+    width: 50%;
+    font-size: 1.8em;
+}
+
+.buy-btn {
+    grid-area: bb;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
 .shop-item {
-    padding-left: 6em;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas:
+        "pr pr md"
+        ". pri pri"
+        ". . ."
+        ". . bb";
+
+    border: solid 1px black;
+    width: 30%;
+    height: 20em;
+    border-radius: 5px;
 }
