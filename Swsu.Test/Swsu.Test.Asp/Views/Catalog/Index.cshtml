@@ -2,33 +2,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Музыкальный магазин</title>
-</head>
-
-<body>
-    <div class="content">
-        <h3 align="center">Купи гитару, а то печень вырежу</h3>
-        <div class='shop'>
-            @foreach (var b in ViewBag.Guitars)
-{
-                <div class="shop-item">
-                    <p>@b.Producer</p>
-                    <p>@b.Model</p>
-                    <p>@b.Price</p>
-                    <p><a href="/Home/Buy/@b.Id">Купить</a></p>
-                </div>
-}
-        </div>
-        <div class="control-buttons">
-            <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 2 }, null)</p>
-            <p>@ViewBag.Page</p>
-            <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page}, null)</p>
-        </div>
+<div class="content">
+    <h3 align="center">Купи гитару, а то печень вырежу</h3>
+    <div class='shop'>
+        @foreach (var b in ViewBag.Guitars)
+        {
+            <div class="shop-item">
+                <p>@b.Producer</p>
+                <p>@b.Model</p>
+                <p>@b.Price</p>
+                <button>@Html.ActionLink("Купить", "Purchase", "Catalog", new { id = b.Id }, null)</button>
+            </div>
+        }
     </div>
-</body>
-</html>
+    <div class="control-buttons">
+        <p>@Html.ActionLink("Пред.", "Index", "Catalog", new { page = ViewBag.Page - 2 }, null)</p>
+        <p>@ViewBag.Page</p>
+        <p>@Html.ActionLink("След.", "Index", "Catalog", new { page = ViewBag.Page}, null)</p>
+    </div>
+</div>

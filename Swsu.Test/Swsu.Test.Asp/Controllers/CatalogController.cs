@@ -19,7 +19,7 @@ namespace Swsu.Test.Asp.Controllers
         /// </summary>
         /// <param name="n">Номер страницы</param>
         /// <returns>Страницу каталога гитар</returns>
-        public ActionResult Index(int page)
+        public ActionResult Index(int page = 0)
         {
             IEnumerable<Guitar> guitars = null;
             int guitarsPerPage = 10;
@@ -47,6 +47,14 @@ namespace Swsu.Test.Asp.Controllers
                 ViewBag.Page = ++page;
             }
                return View();            
+        }
+
+        [HttpGet]
+        public ActionResult Purchase(Guid id)
+        {
+            ViewBag.Id = id;
+
+            return View();
         }
     }
 }
