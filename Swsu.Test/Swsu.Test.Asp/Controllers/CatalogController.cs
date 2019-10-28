@@ -19,15 +19,22 @@ namespace Swsu.Test.Asp.Controllers
         /// </summary>
         /// <param name="n">Номер страницы</param>
         /// <returns>Страницу каталога гитар</returns>
-        public ActionResult Index(int page = 0)
+        public ActionResult Index(int page = 1)
         {
+            var pagesToShow = page;
+            if (page < 1)
+            {
+                page = 1;
+            }
+
             IEnumerable<Guitar> guitars = db.Guitars
-                                        .OrderBy(g => g.Id)
+                                        .OrderBy(g => g.Model)
+                                        .Skip(--page * 6)
                                         .Take(6)
-                                        .Skip(page * 6);
+                                        .ToList();
 
             ViewBag.Guitars = guitars;
-            ViewBag.Page = (page == 0)?1:page;
+            ViewBag.Page = (pagesToShow < 1) ? 1 : pagesToShow;
             return View();
         }
     }

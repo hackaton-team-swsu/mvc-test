@@ -166,8 +166,8 @@ D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\ru\System.Web.Razor.resources.dll
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\ru\System.Web.WebPages.resources.dll
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\ru\System.Web.WebPages.Deployment.resources.dll
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\bin\ru\System.Web.WebPages.Razor.resources.dll
-D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.csprojAssemblyReference.cache
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.csproj.CoreCompileInputs.cache
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.csproj.CopyComplete
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.dll
 D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.pdb
+D:\Src1\mvc-test\Swsu.Test\Swsu.Test.Asp\obj\Debug\Swsu.Test.Asp.csprojAssemblyReference.cache
