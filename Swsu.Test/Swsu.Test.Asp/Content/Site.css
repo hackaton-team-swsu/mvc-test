@@ -38,9 +38,8 @@ input {
 }
 
 .shop {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: unset;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .control-buttons {
@@ -49,4 +48,8 @@ input {
     justify-content: space-between;
     width: 20%;
     margin-left: 40%;
+}
+
+.shop-item {
+    padding-left: 6em;
 }
