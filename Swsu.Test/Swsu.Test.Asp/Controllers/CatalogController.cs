@@ -48,6 +48,12 @@ namespace Swsu.Test.Asp.Controllers
             return View(guitars);
         }
 
+
+        /// <summary>
+        /// Совершение покупки
+        /// </summary>
+        /// <param name="id">Идентификатор гитары</param>
+        /// <returns>Страница покупки</returns>
         [HttpGet]
         public ActionResult Purchase(Guid id)
         {
@@ -61,6 +67,18 @@ namespace Swsu.Test.Asp.Controllers
         {
             ViewBag.Succsess = true;
             ViewBag.Message = $"Поздравляем с покупкой, {purchase.Person}";
+
+            var newguitar = new Purchase
+            {
+                PurchaseId = Guid.NewGuid(),
+                Address = purchase.Address,
+                Person = purchase.Person,
+                Date = DateTime.Now,
+                GuitarId = purchase.GuitarId
+            };
+
+            db.Purchases.Add(newguitar);
+            db.SaveChanges();
 
             return View(purchase);
         }
