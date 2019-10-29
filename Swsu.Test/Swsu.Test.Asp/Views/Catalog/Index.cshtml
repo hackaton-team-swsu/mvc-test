@@ -10,10 +10,10 @@
         @foreach (var b in Model)
         {
             <div class="shop-item">
-                <p>@Html.DisplayFor(item => b.Producer)</p>
-                @Html.DisplayFor(item => b.Model)
-                @Html.DisplayFor(item => b.Price)
-                @Html.DisplayFor(item => b.IsInStore)
+                <div class="producer">@Html.DisplayFor(item => b.Producer)</div>
+                <div class="model">@Html.DisplayFor(item => b.Model)</div>
+                <div class="price">@Html.DisplayFor(item => b.Price)</div>
+                <div class="avaible">@Html.DisplayFor(item => b.IsInStore)</div>
                 <button class="buy-btn">@Html.ActionLink("Купить", "Purchase", "Catalog", new { id = b.Id }, null)</button>
             </div>
         }

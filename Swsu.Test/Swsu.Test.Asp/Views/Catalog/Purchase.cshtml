@@ -5,7 +5,7 @@
 
 <div>
     <h3>Форма оформления покупки</h3>
-    @using(Html.BeginForm("Buy", "Home", FormMethod.Post))
+    @using(Html.BeginForm("Buy", "Catalog", FormMethod.Post))
     {
         @Html.HiddenFor(m => m.GuitarId)
         @Html.LabelFor(m => m.Person, "Введите своё имя")

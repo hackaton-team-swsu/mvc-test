@@ -43,7 +43,6 @@ namespace Swsu.Test.Asp.Controllers
             }
             finally
             {
-                //ViewBag.Guitars = guitars;
                 ViewBag.Page = ++page;
             }
             return View(guitars);
@@ -55,6 +54,15 @@ namespace Swsu.Test.Asp.Controllers
             ViewBag.GuitarId = id;
 
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Buy(Purchase purchase)
+        {
+            ViewBag.Succsess = true;
+            ViewBag.Message = $"Поздравляем с покупкой, {purchase.Person}";
+
+            return View(purchase);
         }
     }
 }

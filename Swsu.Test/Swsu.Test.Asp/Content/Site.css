@@ -97,6 +97,12 @@ input {
     margin-bottom: 0.5em;
 }
 
+.avaible {
+    grid-area: ava;
+    width: 200%;
+    height: 200%;
+}
+
 .shop-item {
     margin: 15px;
     display: grid;
@@ -106,7 +112,7 @@ input {
         "pr pr md"
         ". pri pri"
         ". . ."
-        ". . bb";
+        "ava . bb";
 
     border: solid 1px black;
     width: 30%;
