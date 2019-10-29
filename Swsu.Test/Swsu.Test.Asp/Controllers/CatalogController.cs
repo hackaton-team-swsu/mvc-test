@@ -31,7 +31,7 @@ namespace Swsu.Test.Asp.Controllers
                           .Take(6)
                           .ToList();
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
                 guitars = db.Guitars
                           .OrderBy(g => g.Model)
@@ -43,16 +43,16 @@ namespace Swsu.Test.Asp.Controllers
             }
             finally
             {
-                ViewBag.Guitars = guitars;
+                //ViewBag.Guitars = guitars;
                 ViewBag.Page = ++page;
             }
-               return View();            
+            return View(guitars);
         }
 
         [HttpGet]
         public ActionResult Purchase(Guid id)
         {
-            ViewBag.Id = id;
+            ViewBag.GuitarId = id;
 
             return View();
         }

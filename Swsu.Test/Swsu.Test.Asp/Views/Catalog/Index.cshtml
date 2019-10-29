@@ -1,16 +1,19 @@
-﻿@{
+﻿@using Swsu.Test.Asp.Models
+@model IEnumerable<Guitar>
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="content">
     <h3 align="center">Купи гитару, а то печень вырежу</h3>
     <div class='shop'>
-        @foreach (var b in ViewBag.Guitars)
+        @foreach (var b in Model)
         {
             <div class="shop-item">
-                <p class="producer">@b.Producer</p>
-                <p class="model">@b.Model</p>
-                <input class="price" value="@b.Price">
+                <p>@Html.DisplayFor(item => b.Producer)</p>
+                @Html.DisplayFor(item => b.Model)
+                @Html.DisplayFor(item => b.Price)
+                @Html.DisplayFor(item => b.IsInStore)
                 <button class="buy-btn">@Html.ActionLink("Купить", "Purchase", "Catalog", new { id = b.Id }, null)</button>
             </div>
         }
