@@ -19,7 +19,7 @@ namespace Swsu.Test.Asp.Controllers
         /// </summary>
         /// <param name="n">Номер страницы</param>
         /// <returns>Страницу каталога гитар</returns>
-        public ActionResult Index(int page)
+        public ActionResult Index(int page = 0)
         {
             IEnumerable<Guitar> guitars = null;
             int guitarsPerPage = 10;
@@ -31,7 +31,7 @@ namespace Swsu.Test.Asp.Controllers
                           .Take(6)
                           .ToList();
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
                 guitars = db.Guitars
                           .OrderBy(g => g.Model)
@@ -43,10 +43,26 @@ namespace Swsu.Test.Asp.Controllers
             }
             finally
             {
-                ViewBag.Guitars = guitars;
                 ViewBag.Page = ++page;
             }
-               return View();            
+            return View(guitars);
+        }
+
+        [HttpGet]
+        public ActionResult Purchase(Guid id)
+        {
+            ViewBag.GuitarId = id;
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Buy(Purchase purchase)
+        {
+            ViewBag.Succsess = true;
+            ViewBag.Message = $"Поздравляем с покупкой, {purchase.Person}";
+
+            return View(purchase);
         }
     }
 }

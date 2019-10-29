@@ -175,8 +175,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Buy.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Catalog\Purchase.cshtml" />
+    <Content Include="Views\Catalog\Buy.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
